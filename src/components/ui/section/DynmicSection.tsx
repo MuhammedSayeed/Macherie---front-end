@@ -36,7 +36,7 @@ const DynmicSection = ({ bigScreenCover, smallScreenCover, path, label , childre
     return (
         <section ref={sectionRef} className='h-[850px] max-h-[850px] w-full bg-cover flex justify-center items-center'>
             {children}
-            <Link href={path} className='rounded-3xl border py-2.5 px-7 text-white bg-black/25 font-semibold hover:bg-black/40 transition-colors'>{label}</Link>
+            <Link href={path} className='rounded-3xl border py-2.5 px-7 text-white bg-black/25 hover:bg-black/40 transition-colors'>{label}</Link>
         </section>
     )
 }
