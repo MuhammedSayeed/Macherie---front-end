@@ -13,7 +13,7 @@ const Footer = () => {
         <FooterColumn title="Help" links={helpLinks} />
         <FooterColumn title="Company" links={companyLinks} />
 
-        <div className="col-span-2 space-y-4">
+        <div className="col-span-2 space-y-8">
           <AppDownload />
 
           <div>
