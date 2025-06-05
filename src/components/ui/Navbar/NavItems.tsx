@@ -3,8 +3,10 @@ import { Button } from "../button"
 import { UserRound } from 'lucide-react';
 const NavItems = () => {
     return (
-        <div className="py-5 flex items-center space-x-4">
-            <SearchButton />
+        <div className="flex items-center space-x-4">
+            <div className="hidden sm:block">
+                <SearchButton />
+            </div>
             <Button variant={"ghost"} className="hover:bg-transparent hover:text-white/70 cursor-pointer !p-0"><UserRound className="size-6" /></Button>
         </div>
     )
