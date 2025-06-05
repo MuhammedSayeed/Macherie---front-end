@@ -1,6 +1,6 @@
 "use client"
 import Link from 'next/link'
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 
 
@@ -8,10 +8,11 @@ interface IProps {
     smallScreenCover: string,
     bigScreenCover: string,
     path: string,
-    label: string
+    label: string,
+    children? : React.ReactNode
 }
 
-const DynmicSection = ({ bigScreenCover, smallScreenCover, path, label }: IProps) => {
+const DynmicSection = ({ bigScreenCover, smallScreenCover, path, label , children}: IProps) => {
     const sectionRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -33,8 +34,9 @@ const DynmicSection = ({ bigScreenCover, smallScreenCover, path, label }: IProps
     }, [bigScreenCover, smallScreenCover])
 
     return (
-        <section ref={sectionRef} className='h-[850px] max-h-[850px] w-full bg-cover bg-center flex justify-center items-center'>
-            <Link href={path} className='rounded-xl border py-3 px-7 text-white bg-black/25 font-semibold hover:bg-black/40 transition-colors'>{label}</Link>
+        <section ref={sectionRef} className='h-[850px] max-h-[850px] w-full bg-cover flex justify-center items-center'>
+            {children}
+            <Link href={path} className='rounded-3xl border py-2.5 px-7 text-white bg-black/25 font-semibold hover:bg-black/40 transition-colors'>{label}</Link>
         </section>
     )
 }
