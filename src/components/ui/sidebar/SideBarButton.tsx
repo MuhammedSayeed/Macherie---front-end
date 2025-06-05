@@ -4,8 +4,10 @@ import { Menu } from 'lucide-react'
 
 const SideBarButton = () => {
     return (
-        <div className="py-5">
-            <Button variant={"outline"} className='bg-transparent py-5 px-10 cursor-pointer rounded-2xl'><Menu /> Menu</Button>
+        <div>
+            <Button variant={"outline"} className='border-none !p-0 bg-transparent cursor-pointer  rounded-xl  md:flex hover:bg-transparent hover:text-white/70'>
+                <Menu className="size-6" /> <span className='hidden md:block' >Menu</span >
+            </Button>
         </div>
     )
 }

@@ -11,7 +11,7 @@ interface IProps {
     label: string
 }
 
-const Section = ({ bigScreenCover, smallScreenCover, path, label }: IProps) => {
+const DynmicSection = ({ bigScreenCover, smallScreenCover, path, label }: IProps) => {
     const sectionRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -34,9 +34,9 @@ const Section = ({ bigScreenCover, smallScreenCover, path, label }: IProps) => {
 
     return (
         <section ref={sectionRef} className='h-[850px] max-h-[850px] w-full bg-cover bg-center flex justify-center items-center'>
-            <Link href={path} className='rounded-2xl border py-3 px-7 text-white bg-black/25 font-semibold hover:bg-black/40 transition-colors'>{label}</Link>
+            <Link href={path} className='rounded-xl border py-3 px-7 text-white bg-black/25 font-semibold hover:bg-black/40 transition-colors'>{label}</Link>
         </section>
     )
 }
 
-export default Section
+export default DynmicSection
