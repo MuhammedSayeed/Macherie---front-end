@@ -13,10 +13,8 @@ const frameHeader = "https://res.cloudinary.com/dndjbkrcv/image/upload/v17491259
 const apple_store = "https://static.pullandbear.net/2/static2/itxwebstandard/images/footer/downloadApp/ios.png"
 const google_play = "https://static.pullandbear.net/2/static2/itxwebstandard/images/footer/downloadApp/android.png"
 
-
-
-
-
+const frameImg = "https://res.cloudinary.com/dndjbkrcv/image/upload/v1749125820/FRAME_DESKTOP_bjtcxw.jpg"
+const frameHeader = "https://res.cloudinary.com/dndjbkrcv/image/upload/v1749125949/frame_header_tm1ukh.png"
 
 
 
@@ -34,4 +32,5 @@ export {
     frameImg,
     apple_store,
     google_play
+    frameImg
 }
