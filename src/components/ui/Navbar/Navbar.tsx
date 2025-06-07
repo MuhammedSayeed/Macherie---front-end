@@ -1,22 +1,13 @@
 "use client"
-import { useCallback, useEffect, useState } from 'react'
+import useNavbar from '@/hooks/useNavbar'
 import Logo from '../Logo'
 import SideBarButton from '../sidebar/SideBarButton'
 import NavItems from './NavItems'
 import SearchButton from '@/components/search/SearchButton'
 
 const Navbar = () => {
-    const [scrolled, setScrolled] = useState(false);
+    const { scrolled } = useNavbar();
 
-
-    const handleScroll = useCallback(() => {
-        setScrolled(window.scrollY > 50);
-    }, [])
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [handleScroll])
     return (
         <div className={`${scrolled ? "bg-gradient-to-b from-black/70 to-transparent" : ""} w-full fixed top-0 left-0 right-0 h-fit z-[50] grid grid-cols-[1fr_2fr_1fr] grid-rows-2 items-center gap-y-4 px-3 py-5 text-white`}>
             <div className="w-full">
