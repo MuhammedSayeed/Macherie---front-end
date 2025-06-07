@@ -10,9 +10,8 @@ interface IProps {
     label: string;
 }
 
-const DynamicSection = ({ bigScreenCover, smallScreenCover, path, label}: IProps) => {
+const DynamicSection = ({ bigScreenCover, smallScreenCover, path, label }: IProps) => {
     const sectionRef = useRef<HTMLDivElement>(null);
-
     const updateBackgroundSection = useCallback(() => {
         if (!sectionRef.current) return;
 
