@@ -17,12 +17,6 @@ const google_play = "https://static.pullandbear.net/2/static2/itxwebstandard/ima
 
 
 
-
-
-
-
-
-
 export {
     new_in_small_screen,
     new_in_big_screen,
