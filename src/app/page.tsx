@@ -1,3 +1,4 @@
+
 import CategoriesCarousel from "@/components/CategoriesCarousel/CategoriesCarousel";
 import BermudaShortsSection from "@/components/sections/BermudaShortsSection";
 import FrameSection from "@/components/sections/FrameSection";
