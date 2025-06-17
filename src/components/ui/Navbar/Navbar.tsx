@@ -10,9 +10,9 @@ import OpenSearchButton from '@/components/search/OpenSearchButton'
 
 const Navbar = () => {
     const { scrolled } = useNavbar();
+    
     return (
-
-        <div className={clsx(`w-full fixed top-0 left-0 right-0 h-fit z-[50] px-3 py-5 text-white`, scrolled && "bg-gradient-to-b from-black/70 to-transparent")}>
+        <div className={clsx(`w-full fixed top-0 left-0 right-0 h-fit z-[11] px-3 py-5 text-white`, scrolled && "bg-gradient-to-b from-black/70 to-transparent")}>
             <div className="relative z-[10] grid grid-cols-[1fr_2fr_1fr] grid-rows-2 items-center gap-y-4 ">
                 <div className="w-full flex items-center space-x-3">
                     <SideBarButton />
@@ -24,7 +24,7 @@ const Navbar = () => {
                 <div className="w-full flex justify-end" >
                     <NavItems />
                 </div>
-                <div className="sm:hidden w-full col-span-3">
+                <div className="md:hidden w-full col-span-3">
                     <OpenSearchButton />
                 </div>
             </div>
