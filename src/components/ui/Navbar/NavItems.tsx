@@ -7,7 +7,7 @@ const NavItems = () => {
     const { isOpen } = useSearchStore();
     return (
         <div className="flex items-center space-x-3">
-            <div className="hidden sm:block">
+            <div className="hidden md:block">
                 <OpenSearchButton />
             </div>
             <Button variant={"ghost"} className={`hover:bg-transparent ${isOpen ? "text-black " : "hover:text-white/70 "} cursor-pointer !p-0`}><UserRound className="size-6" /></Button>

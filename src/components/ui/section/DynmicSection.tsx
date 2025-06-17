@@ -13,11 +13,10 @@ interface IProps {
 
 const DynamicSection = ({ bigScreenCover, smallScreenCover, path, label }: IProps) => {
     const sectionRef = useRef<HTMLDivElement>(null);
+
     const updateBackgroundSection = useCallback(() => {
         if (!sectionRef.current) return;
-
         const imageUrl = window.innerWidth >= 768 ? bigScreenCover : smallScreenCover;
-
         sectionRef.current.style.backgroundImage = `url(${imageUrl})`;
 
     }, [bigScreenCover, smallScreenCover]);
@@ -32,7 +31,7 @@ const DynamicSection = ({ bigScreenCover, smallScreenCover, path, label }: IProp
 
     return (
         <section ref={sectionRef} className="h-[850px] max-h-[850px] w-full bg-cover bg-center flex flex-col justify-center items-center" >
-            <Link href={path} className="rounded-3xl border py-2.5 px-7 text-white bg-black/25 font-semibold hover:bg-black/40 transition-colors">
+            <Link href={path} className="rounded-3xl border py-2.5 px-7 text-white bg-black/25 font-medium hover:bg-black/40 transition-colors">
                 {label}
             </Link>
         </section>
