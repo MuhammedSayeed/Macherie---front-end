@@ -9,7 +9,7 @@ const FooterBottom = () => {
     </React.Fragment>
   ));
   return (
-    <div className="border-t mt-10 py-4 flex flex-col md:flex-row items-center justify-center space-x-4 text-gray-500 text-xs">
+    <div className="border-t mt-10 p-4 flex flex-col md:flex-row items-center justify-center space-x-4 text-gray-500 text-xs">
       <div className="flex gap-2 flex-wrap text-center md:text-left">{renderLinks}</div>
       <div className="mt-4 md:mt-0 flex items-center gap-2">
         <span>{footerLanguage.country}</span>
