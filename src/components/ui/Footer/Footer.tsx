@@ -8,22 +8,20 @@ import AppDownload from "./AppDownload";
 
 const Footer = () => {
   return (
-    <footer className="bg-white border-t pt-8 text-sm">
-      <div className="max-w-[983px] mb-20 mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-        <FooterColumn title="Help" links={helpLinks} />
-        <FooterColumn title="Company" links={companyLinks} />
+<footer className="bg-white border-t pt-8 text-sm">
+  <div className="w-full max-w-screen-xl px-4 sm:px-6 lg:px-8 mb-20 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    <FooterColumn title="Help" links={helpLinks} />
+    <FooterColumn title="Company" links={companyLinks} />
+    
+    <div className="lg:col-span-2 space-y-8">
+      <AppDownload />
+      <SocialIcons icons={socialIcons} />
+    </div>
+  </div>
 
-        <div className="col-span-2 space-y-8">
-          <AppDownload />
+  <FooterBottom />
+</footer>
 
-          <div>
-            <SocialIcons icons={socialIcons} />
-          </div>
-        </div>
-      </div>
-
-      <FooterBottom />
-    </footer>
   );
 };
 
