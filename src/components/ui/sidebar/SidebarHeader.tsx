@@ -13,8 +13,8 @@ const SidebarHeader = () => {
     ))
 
     return (
-        <div className="grid grid-cols-[1fr_auto] items-center shadow-lg border-black/20">
-            <div className="flex justify-center gap-2 border-r border-black/20 py-4">
+        <div className="grid grid-cols-[1fr_auto] items-center border-b-[6px] border-[#E3E3E3]">
+            <div className="flex justify-center gap-2 border-r-2 border-[#E3E3E3] py-4">
                 {renderGenresClothes}
             </div>
             <Button onClick={handleCloseSidebar} className="hover:bg-transparent cursor-pointer !px-5" variant={"ghost"}>
