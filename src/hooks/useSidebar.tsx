@@ -14,7 +14,7 @@ const useSidebar = () => {
             const isSubLink = l.subLinks ? () => handleShowSubLinks(l.subLinks as ISidebarLink[], l.text) : () => { };
 
             return (
-                <div onClick={isSubLink} key={l.id} className={clsx("flex w-full items-center justify-between px-5 py-6 cursor-pointer text-black/80 hover:text-black hover:bg-black/5 transition-colors", !isLast && "border-b border-black/10 md:border-none")}>
+                <div onClick={isSubLink} key={l.id} className={clsx("flex w-full items-center justify-between px-5 py-6 cursor-pointer text-black/80 hover:text-black hover:bg-black/5 transition-colors", !isLast && "border-b border-black/10")}>
                     <span className='block text-xl font-medium '>{l.text}</span>
                     {l.subLinks && <span><ChevronRight /></span>}
                 </div>
