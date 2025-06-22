@@ -13,7 +13,7 @@ const Sidebar = () => {
   return (
     <div className={clsx("fixed inset-0 w-full h-full z-[13] font-sans transition-opacity duration-300", isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none")}>
       {/* Overlay */}
-      <div onClick={handleCloseSidebar} className={clsx("hidden md:block absolute z-[14] w-full h-full inset-0 bg-black/50 transition-opacity duration-300 ", isOpen ? "opacity-100" : "opacity-0 pointer-events-none")} />
+      <div onClick={handleCloseSidebar} className={clsx("absolute z-[14] w-full h-full inset-0 bg-black/50 transition-opacity duration-300 ", isOpen ? "opacity-100" : "opacity-0 pointer-events-none")} />
       {/* Sidebar */}
       <div className="h-full p-5">
         <div className={clsx("relative z-[15] w-full h-full md:max-w-[364px] rounded-2xl bg-white overflow-hidden transition-transform duration-300", isOpen ? "translate-x-0" : "-translate-x-full")}>
