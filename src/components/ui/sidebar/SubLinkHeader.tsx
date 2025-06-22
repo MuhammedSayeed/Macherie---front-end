@@ -9,7 +9,7 @@ const SubLinkHeader = () => {
     const { handleCloseSubLinks } = useSidebar();
 
     return (
-        <div onClick={handleCloseSubLinks} className="flex items-center shadow-lg border-black/20 py-2.5">
+        <div onClick={handleCloseSubLinks} className="flex items-center border-b-[6px] border-[#E3E3E3] py-2.5">
             <Button className="hover:bg-transparent cursor-pointer !px-5" variant={"ghost"}>
                 <ChevronLeft className="size-6" />
             </Button>
