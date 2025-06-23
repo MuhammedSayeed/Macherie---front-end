@@ -1,7 +1,8 @@
-import { carousel_bg } from "@/constants/images"
+import { carousel_bg, frameHeader } from "@/constants/images"
 import { Carousel, CarouselContent } from "../ui/carousel"
 import CategoryCarouselItem from "./CategoryCarouselItem"
 import { categoriesCarouselItmes } from "@/constants/categoriesCarousel"
+import Image from "next/image"
 
 const CategoriesCarousel = () => {
     const renderCarouselItmes = categoriesCarouselItmes.map((item) => (
@@ -9,9 +10,9 @@ const CategoriesCarousel = () => {
     ))
 
     return (
-        <div style={{ backgroundImage: `url(${carousel_bg})`}} className="w-full py-8 px-4 bg-center bg-cover">
-            <div className="text-center mb-8">
-                <span className="text-black text-2xl md:text-3xl font-light">Explore Our Products</span>
+        <div style={{ backgroundImage: `url(${carousel_bg})` }} className="w-full py-12 px-4 bg-center bg-cover">
+            <div className=" flex justify-center mb-8">
+                <Image src={frameHeader} height={350} width={350} alt='frame' />
             </div>
             {/* Desktop version */}
             <div className="hidden md:block">

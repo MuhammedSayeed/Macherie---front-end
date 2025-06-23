@@ -10,8 +10,8 @@ const NavItems = () => {
             <div className="hidden md:block">
                 <OpenSearchButton />
             </div>
-            <Button variant={"ghost"} className="hover:bg-transparent text-black cursor-pointer !p-0"><UserRound className="size-6" /></Button>
-            <Button onClick={handleOnOpen} variant={"ghost"} className="hover:bg-transparent text-black  cursor-pointer !p-0"><ShoppingCart className="size-6" /></Button>
+            <Button variant={"ghost"} className="hover:bg-transparent text-black cursor-pointer !p-0"><UserRound className="size-6 antialiased" /></Button>
+            <Button onClick={handleOnOpen} variant={"ghost"} className="hover:bg-transparent text-black  cursor-pointer !p-0 antialiased"><ShoppingCart className="size-6" /></Button>
         </div>
     )
 }
