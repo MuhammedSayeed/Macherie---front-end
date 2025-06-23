@@ -1,12 +1,15 @@
 "use client"
-import { useSearchStore } from '@/lib/store/useSearchStore'
+import { websiteLogoDark } from '@/constants/logo'
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
 const Logo = () => {
-    const { isOpen } = useSearchStore();
+
     return (
-        <Link href={"/"} className={`font-qurova tracking-widest text-3xl ${isOpen ? "text-black" : "text-white"} `}>MACHÈRIE</Link>
+        <Link href={"/"} className={`font-qurova tracking-widest text-3xl `}>
+            <Image priority src={websiteLogoDark} width={182} height={36} alt='website-logo' />
+        </Link>
     )
 }
 

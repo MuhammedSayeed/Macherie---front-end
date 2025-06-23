@@ -12,7 +12,7 @@ const Navbar = () => {
     const { scrolled } = useNavbar();
     
     return (
-        <div className={clsx(`w-full fixed top-0 left-0 right-0 h-fit z-[11] px-3 py-5 text-white`, scrolled && "bg-gradient-to-b from-black/70 to-transparent")}>
+        <div className={clsx(`w-full fixed top-0 left-0 right-0 h-fit z-[11] px-3 py-5 text-white`, scrolled && "bg-gradient-to-b from-white/70 to-transparent")}>
             <div className="relative z-[10] grid grid-cols-[1fr_2fr_1fr] grid-rows-2 items-center gap-y-4 ">
                 <div className="w-full flex items-center space-x-3">
                     <SideBarButton />

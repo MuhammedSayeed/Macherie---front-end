@@ -1,3 +1,4 @@
+import { carousel_bg } from "@/constants/images"
 import { Carousel, CarouselContent } from "../ui/carousel"
 import CategoryCarouselItem from "./CategoryCarouselItem"
 import { categoriesCarouselItmes } from "@/constants/categoriesCarousel"
@@ -8,9 +9,9 @@ const CategoriesCarousel = () => {
     ))
 
     return (
-        <div className="w-full bg-black py-8 px-4">
+        <div style={{ backgroundImage: `url(${carousel_bg})`}} className="w-full py-8 px-4 bg-center bg-cover">
             <div className="text-center mb-8">
-                <span className="text-white text-2xl md:text-3xl font-light">Explore Our Products</span>
+                <span className="text-black text-2xl md:text-3xl font-light">Explore Our Products</span>
             </div>
             {/* Desktop version */}
             <div className="hidden md:block">

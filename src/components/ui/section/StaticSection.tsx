@@ -7,9 +7,9 @@ interface IProps {
 }
 const StaticSection = ({ children, cover }: IProps) => {
     return (
-        <section style={{ backgroundImage: `url(${cover})` }} className='h-[850px] max-h-[850px] w-full bg-cover bg-right flex justify-center items-center' >
+        <section style={{ backgroundImage: `url(${cover})`, backgroundPosition: 'center top'}} className="h-[850px] max-h-[850px] w-full bg-cover flex justify-center items-center">
             {children}
-        </section >
+        </section>
     )
 }
 

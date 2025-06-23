@@ -10,8 +10,8 @@ const OpenSearchButton = () => {
   if (isOpen) return null;
 
   return (
-    <div onClick={() => handleSetSearchState(true)} className="py-0.5 pl-2 min-w-[152px] lg:min-w-[250px] border rounded-xl bg-white/5 cursor-pointer">
-      <Button variant={"ghost"} className='!p-0 hover:bg-transparent hover:text-white/70 cursor-pointer'>
+    <div onClick={() => handleSetSearchState(true)} className="py-0.5 pl-2 min-w-[152px] lg:min-w-[250px] border border-black rounded-xl bg-white/5 cursor-pointer">
+      <Button variant={"ghost"} className='!p-0 hover:bg-transparent text-black  cursor-pointer'>
         <Search className="size-6" />
         <span>Search</span>
       </Button>
