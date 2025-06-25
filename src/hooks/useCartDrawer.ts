@@ -2,6 +2,7 @@
 
 import { useCartDrawerStore } from "@/lib/store/useCartDrawerStore";
 
+
 const useCartDrawer = () => {
     const { isOpen, setCartDrawerState } = useCartDrawerStore();
 
@@ -11,6 +12,9 @@ const useCartDrawer = () => {
     const handleOnOpen = () => {
         setCartDrawerState(true);
     }
+
+
+    
 
     return {
         isOpen,

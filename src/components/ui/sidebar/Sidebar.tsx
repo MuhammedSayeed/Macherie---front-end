@@ -10,6 +10,7 @@ import useSidebar from "@/hooks/useSidebar"
 const Sidebar = () => {
   const { isOpen, showSubLinks } = useSidebarStore();
   const { handleCloseSidebar } = useSidebar();
+
   return (
     <div className={clsx("fixed inset-0 w-full h-full z-[13] font-sans transition-opacity duration-300", isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none")}>
       {/* Overlay */}
