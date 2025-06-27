@@ -1,5 +1,4 @@
 import FilterButton from "@/components/ClothesFilter/FilterButton";
-import FilterDrawer from "@/components/ClothesFilter/FilterDrawer";
 import Clothes from "@/components/clothes/Clothes";
 import CompactViewButton from "@/components/clothes/CompactViewButton";
 import ClothingStyles from "@/components/clothingStyles/ClothingStyles"
@@ -30,7 +29,6 @@ const page = () => {
           <FilterButton />
         </div>
       </div>
-      <FilterDrawer />
       <Clothes />
     </div>
   )

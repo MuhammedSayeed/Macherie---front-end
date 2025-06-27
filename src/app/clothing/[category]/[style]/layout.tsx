@@ -8,10 +8,10 @@ interface IProps {
     children: React.ReactNode
 }
 
-const layout = ({ children, params }: IProps) => {
+const layout = async ({ children, params }: IProps) => {
     return (
         <div className="px-3 pt-[9rem] md:pt-[6rem]">
-            {/* <FilterDrawer/> */}
+            <FilterDrawer/>
             <CurrentPath path={params.category} />
             <div className="">
                 {children}
