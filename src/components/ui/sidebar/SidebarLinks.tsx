@@ -1,14 +1,15 @@
-import { sidebarLinks } from '@/constants/sidebar'
-import useSidebar from '@/hooks/useSidebar';
+import useSidebar from "@/hooks/useSidebar"
+import { memo } from "react"
+import Links from "./Links"
 
 const SidebarLinks = () => {
-    const { renderSidebarLinks } = useSidebar();
+  const { sidebarLinks } = useSidebar()
 
-    return (
-        <div className="flex flex-col">
-            {renderSidebarLinks(sidebarLinks)}
-        </div>
-    )
+  return (
+    <div className="flex flex-col">
+      <Links links={sidebarLinks?.results || []} />
+    </div>
+  )
 }
 
-export default SidebarLinks
+export default memo(SidebarLinks)

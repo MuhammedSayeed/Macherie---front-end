@@ -1,6 +1,7 @@
 "use client"
 
-import { useFilterDrawerStore } from "@/lib/store/useFilterDrawerStore"
+import { useFilterDrawerStore } from "@/lib/store/filterDrawerStore";
+
 
 const useFilterDrawer = () => {
     const {isOpen , setCartDrawerState} = useFilterDrawerStore();

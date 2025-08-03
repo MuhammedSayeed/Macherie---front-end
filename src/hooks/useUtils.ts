@@ -7,10 +7,16 @@ const useUtils = () => {
     const handleNavigate = (path: string) => {
         router.push(path);
     }
+
+    const getIdFromUrl = (url: string) => {
+        const id = url.split("-").pop();
+        return id;
+      }
     
     return {
         handleNavigate,
-        params
+        params,
+        getIdFromUrl
     }
 }
 

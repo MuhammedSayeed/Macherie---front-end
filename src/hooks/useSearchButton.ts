@@ -1,6 +1,7 @@
 "use client"
 
-import { useSearchStore } from "@/lib/store/useSearchStore";
+import { useSearchStore } from "@/lib/store/searchStore";
+
 
 const useSearchButton = () => {
     const { setSearchState } = useSearchStore();

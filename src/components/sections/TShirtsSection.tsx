@@ -1,13 +1,14 @@
-import { t_shirts_big_screen, t_shirts_small_screen } from "@/constants/images"
-import DynmicSection from "../ui/section/DynmicSection"
+import { getBanner } from "@/lib/api/banner";
+import StaticSection from "../ui/section/StaticSection"
 
 
 
 
-const TShirtsSection = () => {
+export default async function TShirtsSection({ value }: { value: string }) {
+    const banner = await getBanner(value);
+
+
     return (
-        <DynmicSection label="T-shirts" path="/t-shirts" bigScreenCover={t_shirts_big_screen} smallScreenCover={t_shirts_small_screen} />
+        <StaticSection cover={banner.image as string} path={`/clothing/${banner.category.value}-${banner.category._id}/all`} label={banner.category.name} />
     )
 }
-
-export default TShirtsSection

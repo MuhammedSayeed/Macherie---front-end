@@ -1,10 +1,13 @@
-import React from 'react'
-import { new_in_big_screen, new_in_small_screen } from '@/constants/images'
-import DynmicSection from '../ui/section/DynmicSection'
-const NewInSection = () => {
+import StaticSection from '../ui/section/StaticSection'
+import { getBanner } from '@/lib/api/banner';
+
+
+
+
+export default async function NewInSection({ value }: { value: string }) {
+    const banner = await getBanner(value);
     return (
-        <DynmicSection path="/new" label="New in" bigScreenCover={new_in_big_screen} smallScreenCover={new_in_small_screen} />
+        <StaticSection cover={banner.image as string} path={`/clothing/${banner.category.value}-${banner.category._id}/all`} label={banner.category.name} />
     )
 }
 
-export default NewInSection

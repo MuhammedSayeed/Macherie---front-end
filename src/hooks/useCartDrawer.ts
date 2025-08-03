@@ -1,6 +1,7 @@
 "use client"
 
-import { useCartDrawerStore } from "@/lib/store/useCartDrawerStore";
+import { useCartDrawerStore } from "@/lib/store/cartDrawerStore";
+
 
 
 const useCartDrawer = () => {

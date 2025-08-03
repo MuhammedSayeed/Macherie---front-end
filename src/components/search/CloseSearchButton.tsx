@@ -1,5 +1,5 @@
 import useSearchButton from "@/hooks/useSearchButton"
-import { useSearchStore } from "@/lib/store/useSearchStore";
+import { useSearchStore } from "@/lib/store/searchStore";
 import { X } from "lucide-react"
 
 const CloseSearchButton = () => {

@@ -3,11 +3,15 @@ export interface IGenderClothes {
     id: number;
 }
 
-
+export interface ISubLink {
+    _id: string;
+    name: string,
+    value: string,
+}
 
 export interface ISidebarLink {
-    id: number | null;
-    text: string;
-    subLinks?: ISidebarLink[];
-    value?: string;
+    _id: string;
+    name: string;
+    value: string;
+    subCategories: ISubLink[];
 }

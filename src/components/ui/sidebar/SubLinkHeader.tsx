@@ -1,8 +1,8 @@
 import React from 'react'
 import { Button } from '../button'
 import { ChevronLeft } from 'lucide-react'
-import { useSidebarStore } from '@/lib/store/useSidebarStore'
 import useSidebar from '@/hooks/useSidebar'
+import { useSidebarStore } from '@/lib/store/sidebarStore'
 
 const SubLinkHeader = () => {
     const { currentSubLink } = useSidebarStore();

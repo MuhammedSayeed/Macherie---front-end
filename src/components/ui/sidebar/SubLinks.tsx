@@ -1,16 +1,15 @@
-import useSidebar from '@/hooks/useSidebar';
-import { useSidebarStore } from '@/lib/store/useSidebarStore';
-import React from 'react'
+import { memo } from "react"
+import Links from "./Links"
+import { useSidebarStore } from "@/lib/store/sidebarStore"
 
 const SubLinks = () => {
-    const { renderSidebarLinks } = useSidebar();
-    const { subLinks } = useSidebarStore();
+  const { subLinks } = useSidebarStore()
 
-    return (
-        <div className="flex flex-col">
-            {renderSidebarLinks(subLinks)}
-        </div>
-    )
+  return (
+    <div className="flex flex-col">
+      <Links links={subLinks} />
+    </div>
+  )
 }
 
-export default SubLinks
+export default memo(SubLinks)

@@ -1,5 +1,5 @@
 "use client"
-import { useSearchStore } from "@/lib/store/useSearchStore"
+import { useSearchStore } from "@/lib/store/searchStore";
 import { useEffect } from "react";
 
 const Search = () => {

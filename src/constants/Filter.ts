@@ -1,6 +1,6 @@
 import { IFilterOptions, IFitsOptions } from "@/interfaces/filter";
 
-export const ByOrderOptions: IFilterOptions[] = [
+export const OrderPriceOptions: IFilterOptions[] = [
     {
         id: 1,
         label: "Priced from low to high",

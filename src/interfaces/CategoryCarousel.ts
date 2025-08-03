@@ -1,8 +1,10 @@
 
 
-export interface CategoriesCarousel {
-    label: string,
-    path: string,
-    image: string
+export interface ICategoriesCarousel {
+    _id: string,
+    name: string,
+    image : string,
+    value: string,
+    parent: string,
 }
 
