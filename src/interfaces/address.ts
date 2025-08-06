@@ -4,5 +4,4 @@ export interface IAddress {
     city: string
     governorate: string
     country: string
-    isDefault: boolean
 }

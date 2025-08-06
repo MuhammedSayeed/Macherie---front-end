@@ -18,7 +18,7 @@ export interface IGetItem {
 }
 
 export interface ICheckItemAvailability {
-    variantId: string,  size: string, quantity: number
+    variantId: string, size: string, quantity: number
 }
 
 export interface CartData {

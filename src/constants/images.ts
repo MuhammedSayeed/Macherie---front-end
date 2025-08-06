@@ -17,8 +17,8 @@ const google_play = "https://static.pullandbear.net/2/static2/itxwebstandard/ima
 const carousel_bg = "https://res.cloudinary.com/dndjbkrcv/image/upload/v1750695147/carsoual_background_cwald0.jpg"
 
 
-
-
+const NOT_FOUND = "https://res.cloudinary.com/dndjbkrcv/image/upload/v1752264921/not_fount_rgfhda.webp";
+const EMPTY_CART = "https://res.cloudinary.com/dndjbkrcv/image/upload/v1754522970/20250807_0228_Cart_Logo_Redesign_remix_01k20vb383ey49mzt3j8mkyd8p_axoekp.png";
 export {
     new_in_small_screen,
     new_in_big_screen,
@@ -30,5 +30,7 @@ export {
     frameImg,
     apple_store,
     google_play,
-    carousel_bg
+    carousel_bg,
+    NOT_FOUND,
+    EMPTY_CART
 }

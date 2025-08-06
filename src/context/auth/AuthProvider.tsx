@@ -20,7 +20,7 @@ interface IAuthProviderProps {
 export const AuthProvider = ({ children }: IAuthProviderProps) => {
     const { Signup: authSignupService, isLoading: isAuthServiceLoading, logout: authLogoutService, login: authLoginService } = useAuth();
     const [user, setUser] = useState<IUser | null>(null);
-    const [isUserDataLoading, setIsUserDataLoading] = useState(true);
+    const [isUserDataLoading, setIsUserDataLoading] = useState(false);
     const localCart = useCartStore()
     const isAuthenticated = user !== null;
     const router = useRouter();
@@ -97,6 +97,7 @@ export const AuthProvider = ({ children }: IAuthProviderProps) => {
     const logout = () => {
         authLogoutService();
         setUser(null);
+        window.location.href = "/";
     }
 
     const getToken = () => {

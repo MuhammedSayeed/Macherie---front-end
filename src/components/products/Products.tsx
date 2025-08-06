@@ -30,7 +30,6 @@ const Products = ({ initialProducts, hasNextPage, category, style }: IProps) => 
     const hasProducts = allProducts.length > 0
     if (!hasProducts && !isFetching) return <NotFound />
 
-
     return <ProductList isCompactView={isCompactView} Products={allProducts} lastItemRef={lastItemRef} />
 
 }
