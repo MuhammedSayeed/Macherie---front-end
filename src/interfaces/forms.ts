@@ -20,9 +20,18 @@ export interface IRESET_PASSWORD_INPUTS extends IBaseInput<"password" | "confirm
 export interface ICHECKOUT_INPUTS extends IBaseInput<"name" | "email" | "phone" | "address" | "city" | "governorate", "Name" | "Email" | "Phone" | "Address" | "City" | "Governorate"> {
     style?: string
 }
+export interface IMANUAL_SHIPPINGADDRESS_INPUTS extends IBaseInput<"shippingAddress.address" | "shippingAddress.city" | "shippingAddress.governorate" | "shippingAddress.country" , "Address" | "City" | "Governorate" | "Country"> {
+    style?: string,
+    placeholder: string
+}
 export interface IEDIT_CONTACT_INPUTS extends IBaseInput<"name" | "email" | "phone", "Name" | "Email" | "Phone"> {
     style?: string
 }
+export interface IADD_NEW_SHIPPING_ADDRESS extends IBaseInput<"address" | "city" | "governorate" | "country", "Address" | "City" | "Governorate" | "Country"> {
+    style?: string,
+    placeholder: string
+}
+
 export interface IRegisterFormData {
     name: string;
     email: string;

@@ -3,6 +3,7 @@ import { CheckoutFormData } from "@/types/checkout";
 import { Edit } from "lucide-react";
 import { UseFormReturn } from "react-hook-form";
 import { useEditContactInfoModalStore } from "@/lib/store/EditContactInfoModalStore";
+import { CONTACT_INFO } from "@/constants/contact";
 
 
 interface IProps {
@@ -11,8 +12,14 @@ interface IProps {
 const AuthenticatedContactSection = ({ form }: IProps) => {
   const { setEditContactInfoState } = useEditContactInfoModalStore();
 
+  const handleOpenEditModal = () => setEditContactInfoState(true);
 
-  const handleOpenEditModal = () => setEditContactInfoState(true)
+  const renderContactInfo = CONTACT_INFO.map(({ label, value }) => (
+    <div key={value} className="flex justify-between items-center py-2 border-b">
+      <span className="text-sm text-gray-600">{label}</span>
+      <span className="font-medium">{form.watch(value)}</span>
+    </div>
+  ))
 
   return (
     <section className="space-y-4">
@@ -24,18 +31,7 @@ const AuthenticatedContactSection = ({ form }: IProps) => {
         </Button>
       </div>
       <div className="space-y-3">
-        <div className="flex justify-between items-center py-2 border-b">
-          <span className="text-sm text-gray-600">Name</span>
-          <span className="font-medium">{form.watch("name")}</span>
-        </div>
-        <div className="flex justify-between items-center py-2 border-b">
-          <span className="text-sm text-gray-600">Email</span>
-          <span className="font-medium">{form.watch("email")}</span>
-        </div>
-        <div className="flex justify-between items-center py-2">
-          <span className="text-sm text-gray-600">Phone</span>
-          <span className="font-medium">{form.watch("phone")}</span>
-        </div>
+        {renderContactInfo}
       </div>
     </section>
   )

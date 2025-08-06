@@ -14,9 +14,6 @@ const CartItems = () => {
     return items?.map((i) => <CartItem item={i} key={`${i.variantId}-${i.size}`} />)
   }
 
-  console.log(items);
-  
-
   return (
     <div className='relative w-full h-full max-h-full'>
       <div className="absolute inset-0 overflow-y-auto p-4 space-y-6">

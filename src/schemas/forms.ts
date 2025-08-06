@@ -64,19 +64,29 @@ const checkoutFormSchema = yup.object({
     name: nameValidation.required("Name is required"),
     email: emailValidation.required("Email is required"),
     phone: phoneValidation.required("Phone number is required"),
-    address: addressValidation.required("Address is required"),
-    city: cityValidation.required("City is required"),
-    governorate: governorateValidation.required("Governorate is required"),
-    country: yup.string().required("Country is required"),
+    shippingAddress: yup.object({
+        address: addressValidation.required("Address is required"),
+        city: cityValidation.required("City is required"),
+        governorate: governorateValidation.required("Governorate is required"),
+        country: yup.string().required("Country is required"),
+    }),
     payment: yup
         .string()
         .oneOf(["cash", "card"], "Please select a payment method")
-        .required("Payment method is required")
-})
+        .required("Payment method is required"),
+});
+
 
 const contactInfoSchema = yup.object({
     name: nameValidation.required("Name is required"),
     phone: phoneValidation.required("Phone number is required"),
+})
+
+const AddNewShippingAddressSchema = yup.object({
+    address: addressValidation.required("Address is required"),
+    city: cityValidation.required("City is required"),
+    governorate: governorateValidation.required("Governorate is required"),
+    country: yup.string().required("Country is required")
 })
 
 
@@ -87,5 +97,6 @@ export {
     forgotPasswordSchema,
     resetPasswordSchema,
     checkoutFormSchema,
-    contactInfoSchema
+    contactInfoSchema,
+    AddNewShippingAddressSchema
 }

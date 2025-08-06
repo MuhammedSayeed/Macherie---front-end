@@ -14,18 +14,15 @@ interface IProps {
 
 
 const EditContactInfoModal = ({ form }: IProps) => {
-  const { register, errors, handleSubmit, isOpen, handleCloseEditModal , isValueChanged} = useEditContactInfoModal({
+  const { register, errors, handleSubmit, isOpen, handleCloseEditModal, isValueChanged } = useEditContactInfoModal({
     name: form.getValues("name"),
-    phone : form.getValues("phone")
+    phone: form.getValues("phone")
   });
-
-
   const onSumbit = (data: EditContactFormData) => {
     form.setValue("name", data.name)
     form.setValue("phone", data.phone)
     handleCloseEditModal();
   }
-
 
   return (
     <Modal isOpen={isOpen} onClose={handleCloseEditModal}>

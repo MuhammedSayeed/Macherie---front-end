@@ -1,4 +1,4 @@
-import { ICHECKOUT_INPUTS, IEDIT_CONTACT_INPUTS, ILOGIN_INPUTS, IREGISTER_INPUTS, IRESET_PASSWORD_INPUTS } from "@/interfaces/forms";
+import { IADD_NEW_SHIPPING_ADDRESS, ICHECKOUT_INPUTS, IEDIT_CONTACT_INPUTS, ILOGIN_INPUTS, IMANUAL_SHIPPINGADDRESS_INPUTS, IREGISTER_INPUTS, IRESET_PASSWORD_INPUTS } from "@/interfaces/forms";
 
 export const REGISTER_INPUTS_FORM: IREGISTER_INPUTS[] = [
     {
@@ -97,25 +97,70 @@ export const EDIT_CONTACT_INPUTS: IEDIT_CONTACT_INPUTS[] = [
         style: "col-span-2"
     }
 ]
-
-export const SHIPPING_INPUTS: ICHECKOUT_INPUTS[] = [
+export const ADD_NEW_SHIPPING_ADDRESS_INPUTS: IADD_NEW_SHIPPING_ADDRESS[] = [
     {
         name: "address",
         label: "Address",
         type: "text",
-        id: "address-checkout",
-        style: "col-span-2"
-    },
-    {
-        name: "governorate",
-        label: "Governorate",
-        type: "text",
-        id: "governorate-checkout"
+        id: "address-add_new_shipping_address",
+        style: "col-span-2",
+        placeholder: "Enter your street address"
     },
     {
         name: "city",
         label: "City",
         type: "text",
-        id: "city-checkout"
+        id: "city-add_new_shipping_address",
+        placeholder: "Enter city"
+    },
+    {
+        name: "governorate",
+        label: "Governorate",
+        type: "text",
+        id: "governorate-add_new_shipping_address",
+        placeholder: "Enter governorate"
+    },
+    {
+        name: "country",
+        label: "Country",
+        type: "text",
+        id: "country-add_new_shipping_address",
+        style: "col-span-2",
+        placeholder: "Enter country"
+    }
+
+]
+
+
+export const MANUAL_SHIPPINGADDRESS_INPUTS : IMANUAL_SHIPPINGADDRESS_INPUTS[] = [
+    {
+        name : "shippingAddress.address",
+        label : "Address",
+        type : "text",
+        id : "shippingAddress.address",
+        style : "col-span-2",
+        placeholder : "Enter your street address"
+    },
+    {
+        name : "shippingAddress.city",
+        label : "City",
+        type : "text",
+        id : "shippingAddress.city",
+        placeholder : "Enter city"
+    },
+    {
+        name : "shippingAddress.governorate",
+        label : "Governorate",
+        type : "text",
+        id : "shippingAddress.governorate",
+        placeholder : "Enter governorate"
+    },
+    {
+        name : "shippingAddress.country",
+        label : "Country",
+        type : "text",
+        id : "shippingAddress.country",
+        style : "col-span-2",
+        placeholder : "Enter country"
     }
 ]

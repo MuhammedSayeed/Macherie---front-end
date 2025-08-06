@@ -23,7 +23,7 @@ const useHybridCart = () => {
     const queryClient = useQueryClient()
     const { isAuthenticated, user, getToken } = useContext(AuthContext)
 
-    const { data: serverCart, isLoading: isServerCartLoading, error } = useCustomQuery({
+    const { data: serverCart, isLoading: isServerCartLoading } = useCustomQuery({
         queryKey: ["cart", user?._id as string],
         endPoint: "/cart",
         config: {
@@ -33,10 +33,6 @@ const useHybridCart = () => {
         },
         enabled: isAuthenticated && !!user,
     })
-
-    console.log(error);
-    
-
 
     // ==================== UTILITY FUNCTIONS ====================
     const getItemsOfCart = (): CartItem[] => {
